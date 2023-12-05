@@ -1,0 +1,14 @@
+services:
+ asir_apachedf:
+    container_name: asir_apachedf
+    image: asir_apachedf
+    ports:
+     - 80:80
+    volumes:
+     - ./paginas:/usr/local/apache2/htdocs  
+    networks:
+      bind9_subnet:
+        ipv4_address: 172.28.5.19
+networks:
+  bind9_subnet: 
+    external: true
